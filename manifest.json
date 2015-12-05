@@ -1,5 +1,5 @@
 {
-  "manifest_version": 1.0,
+  "manifest_version": 2,
 
   "name": "Kandy Gram",
   "description": "This extension is a timewaster app that detects if you've spent too much time on Facebook and then calls someone.",
