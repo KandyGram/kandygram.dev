@@ -1,0 +1,13 @@
+{
+  "manifest_version": 1.0,
+
+  "name": "Kandy Gram",
+  "description": "This extension is a timewaster app that detects if you've spent too much time on Facebook and then calls someone.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "grandma_sml.jpg",
+    "default_popup": "kandygram.html"
+  },
+  "permissions": []
+}
