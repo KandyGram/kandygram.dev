@@ -54,7 +54,7 @@ var showVideo = true;
 
 // Get user input and make a call to the callee.
 function startCall() {
-    var callee = "user2@kandygram.gmail.com";
+    var callee = "user1@kandygram.gmail.com";
 
     // Tell Kandy to make a call to callee.
     kandy.call.makeCall(callee, showVideo);
