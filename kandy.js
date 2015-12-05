@@ -3,10 +3,11 @@
  * View this tutorial and others at https://developer.kandy.io/tutorials
  */
 
-// Variables for logging in.
+
+
 var projectAPIKey = "DAKd57316cd4b1040fcb30db08955d02925";
-var username = "user1@kandygram.gmail.com";
-var password = "1suscipitessemagn1";
+var username = "user2@kandygram.gmail.com";
+var password = "2facilispraesenti2";
 
 // Setup Kandy to make and receive calls.
 kandy.setup({
@@ -20,8 +21,14 @@ kandy.setup({
         callincoming: onCallIncoming,
         callestablished: onCallEstablished,
         callended: onCallEnded
-    }
+    },
+    autoreconnect: true,
+    registerforcalls: true,
+    loglevel: 'debug'
 });
+
+// Status of the user.
+var isLoggedIn = false;
 
 // Login automatically as the application starts.
 kandy.login(projectAPIKey, username, password, onLoginSuccess, onLoginFailure);
@@ -29,6 +36,7 @@ kandy.login(projectAPIKey, username, password, onLoginSuccess, onLoginFailure);
 // What to do on a successful login.
 function onLoginSuccess() {
     log("Login was successful.");
+    isLoggedIn = true;
 }
 
 // What to do on a failed login.
@@ -178,3 +186,11 @@ function toggleVideo() {
         showVideo = true;
     }
 }
+
+document.getElementById("make-call").addEventListener("click", startCall);
+document.getElementById("mute-call").addEventListener("click", toggleMute);
+document.getElementById("hold-call").addEventListener("click", toggleHold);
+document.getElementById("show-video").addEventListener("click", toggleVideo);
+document.getElementById("end-call").addEventListener("click", endCall);
+document.getElementById("accept-call").addEventListener("click", acceptCall);
+document.getElementById("decline-call").addEventListener("click", declineCall);
