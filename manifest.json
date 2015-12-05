@@ -9,5 +9,9 @@
     "default_icon": "grandma_sml.PNG",
     "default_popup": "kandygram.html"
   },
+  "content_scripts": [{
+      "matches": ["http://www.facebook.com/*"],
+      "js": ["kandy.min.js"]
+  }],
   "permissions": []
 }
