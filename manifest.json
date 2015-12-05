@@ -6,7 +6,7 @@
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "grandma_sml.jpg",
+    "default_icon": "grandma_sml.PNG",
     "default_popup": "kandygram.html"
   },
   "permissions": []
