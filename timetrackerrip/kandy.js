@@ -28,12 +28,12 @@ kandy.login(projectAPIKey, username, password, onLoginSuccess, onLoginFailure);
 
 // What to do on a successful login.
 function onLoginSuccess() {
-    log("Login was successful.");
+    console.log("Login was successful.");
 }
 
 // What to do on a failed login.
 function onLoginFailure() {
-    log("Login failed. Make sure you input the user's credentials!");
+    console.log("Login failed. Make sure you input the user's credentials!");
 }
 
 // Utility function for appending messages to the message div.
