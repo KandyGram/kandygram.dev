@@ -1,0 +1,37 @@
+{
+  "name": "KandyGram",
+  "version": "1.2.3",
+  "description": "Keeps track of how much time you spend on various web sites.",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["config.js", "sites.js", "tracker.js", "background.js", "kandy-lib.js" ]
+  },
+  "content_security_policy": "script-src 'self' https://kandy-portal.s3.amazonaws.com/public/javascript/kandy/2.4.2/kandy.js https://ssl.google-analytics.com; object-src 'self'",
+  
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "alarms",
+    "idle",
+    "tabs",
+    "http://*.google.com/",
+    "activeTab",
+    "background",
+    "browsingData",
+    "contentSettings",
+    "storage",
+    "system.storage",
+    "videoCapture",
+    "audioCapture"
+  ],
+   
+  "browser_action": {
+    "default_icon": "grandma_sml.PNG",
+    "default_title": "KandyGram",
+    "default_popup": "popup.html"
+  },
+
+  "options_page": "options.html"
+}

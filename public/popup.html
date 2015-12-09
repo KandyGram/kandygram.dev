@@ -1,0 +1,59 @@
+<html>
+  <head>
+  <style>
+  td,th {
+    color: black;
+  }
+  video {
+    width: 50% !important;
+
+  }
+  </style>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="buttons.css"/>
+  <script src="kandy-lib.js" ></script>
+  <script src="config.js"></script>
+  <script src="sites.js"></script>
+  <script src="popup.js"></script>
+  <script src="kandy.js"></script>
+  <script src="localStorage.js"></script>
+
+</head>
+  <body>
+    <div id="button_row">
+      <button id="options" class="pure-button">Options</button>&nbsp;
+      <button id="clear" class="pure-button">Clear</button>&nbsp;<br>
+      <!-- User input: Handle call buttons. -->
+      <input type="button" value="Make Call" id="make-call"/>
+      <input type="button" value="Mute/Unmute Call" id="mute-call" disabled/>
+      <input type="button" value="Hold/Unhold Call" id="hold-call" disabled/>
+      <input type="button" value="Show/Hide Video" id="show-video"/>
+      <input type="button" value="End Call" id="end-call" disabled/>
+      <input type="button" value="Accept Call" id="accept-call" disabled/>
+      <input type="button" value="Decline Call" id="decline-call" disabled/>
+    </div>
+
+    <div id="lastClear"></div>
+    <div id="nextClear"></div>
+    <div>
+      <table id="stats">
+        <thead>
+          <tr>
+            <th scope="col">Site</th>
+            <th scope="col">Time</th>
+            <th scope="col">Percent</th>
+          </tr>
+        </thead>
+        <tbody id="stats_tbody"></tbody>
+      </table>
+
+      <div id="messages">Messages</div>
+
+      Remote video: <div id="remote-container"></div>
+
+      Local video: <div id="local-container"></div>
+    </div>
+
+    <script src="onload.js"></script>
+  </body>
+</html>
